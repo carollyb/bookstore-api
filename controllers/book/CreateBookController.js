@@ -1,4 +1,4 @@
-const createBookService = require("../services/book/CreateBookService");
+const createBookService = require("../../services/book/CreateBookService");
 
 module.exports = {
     async handle(request, response) {
@@ -23,7 +23,7 @@ module.exports = {
                 price
             )
 
-            response.status(200).json(book)
+            return response.status(200).json(book)
 
         } catch (error) {
             response.status(400).json({error: error.message})
