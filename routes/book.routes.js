@@ -4,6 +4,7 @@ const deleteBookController = require("../controllers/book/DeleteBookController")
 const ListAllBooksController = require("../controllers/book/ListAllBooksController");
 const ListByTitleBookController = require("../controllers/book/ListByTitleBookController");
 const UpdateBookController = require("../controllers/book/UpdateBookController");
+const requiredFields = require("../middlewares/requiredFields")
 
 const router = Router();
 
@@ -13,6 +14,8 @@ router.get("/", ListAllBooksController.handle)
 router.get("/:title", ListByTitleBookController.handle)
 
 router.patch("/:id", UpdateBookController.handle)
+router.put("/:id", requiredFields.validateFields, UpdateBookController.handle)
+
 
 router.delete("/:id", deleteBookController.handle)
 
