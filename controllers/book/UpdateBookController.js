@@ -24,7 +24,6 @@ module.exports = {
                 publisher,
                 price
             )
-            console.log(updatedBook);
             return response.status(202).json({
                 message: "Successfully updated",
                 updated: updatedBook
