@@ -4,6 +4,7 @@ module.exports = {
     validateFields(request, response, next) {
         const schema = Joi.object().keys({
             title: Joi.string().required(),
+            author: Joi.string().required(),
             language: Joi.string().required(),
             num_pages: Joi.number().required(),
             publication_date: Joi.date().required(),
