@@ -5,7 +5,7 @@ module.exports = {
         try {
             const { 
                 title,
-                author_id,
+                author,
                 language,
                 num_pages,
                 publication_date,
@@ -15,7 +15,7 @@ module.exports = {
 
             const book = await createBookService.execute(
                 title,
-                author_id,
+                author,
                 language,
                 num_pages,
                 publication_date,

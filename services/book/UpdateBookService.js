@@ -5,6 +5,7 @@ module.exports = {
     async execute(
         id,
         newTitle,
+        newAuthor,
         newLanguage,
         newNum_pages,
         newPublication_date,
@@ -18,6 +19,7 @@ module.exports = {
                 },
                 data: {
                     title: newTitle,
+                    author: newAuthor,
                     language: newLanguage,
                     num_pages: newNum_pages,
                     publication_date: newPublication_date,

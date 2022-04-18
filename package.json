@@ -10,14 +10,12 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "prisma": "^3.12.0"
-  },
   "dependencies": {
     "@prisma/client": "^3.12.0",
     "bcryptjs": "^2.4.3",
     "express": "^4.17.3",
     "joi": "^17.6.0",
+    "prisma": "^3.12.0",
     "uuid": "^8.3.2"
   }
 }

@@ -3,8 +3,8 @@ const CreateUserService = require("../../services/user/CreateUserService");
 module.exports = {
     async handle(request, response) {
         try {
-            const { username, password } = request.body
-            const user = await CreateUserService.execute(username, password)
+            const { username, fullName, password } = request.body
+            const user = await CreateUserService.execute(username, fullName, password)
             response.status(201).json({
                 "user created": user
             })

@@ -2,12 +2,13 @@ const prisma = require("../../database/prismaClient");
 const { hash } = require("bcryptjs")
 
 module.exports = {
-    async execute(username, password) {
+    async execute(username, fullName, password) {
         try {
             const passwordHash = await hash(password, 8)
             const user = prisma.user.create({
                 data: {
                     username,
+                    fullName,
                     password: passwordHash
                 }
             })

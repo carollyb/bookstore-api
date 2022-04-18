@@ -6,6 +6,7 @@ module.exports = {
             const id = request.params.id;
             const {
                 title,
+                author,
                 language,
                 num_pages,
                 publication_date,
@@ -16,6 +17,7 @@ module.exports = {
             const updatedBook = await UpdateBookService.execute(
                 id,
                 title,
+                author,
                 language,
                 num_pages,
                 publication_date,
