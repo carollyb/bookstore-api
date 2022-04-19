@@ -3,7 +3,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output = "./client"
 }
 
 datasource db {
@@ -14,6 +13,7 @@ datasource db {
 model Book {
   id String @id @default(uuid()) @map("_id")
   title String
+  author String
   language String
   num_pages Int
   publication_date DateTime
@@ -27,6 +27,7 @@ model Book {
 
 model User {
   id String @id @default(uuid()) @map("_id")
+  fullName String
   username String
   password String
   books Book[]
