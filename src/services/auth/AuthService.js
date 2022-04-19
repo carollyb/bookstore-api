@@ -15,7 +15,7 @@ module.exports = {
             const passwordMatch = await compare(password, user[0].password);
 
             if(!passwordMatch) {
-                throw new Error("Invalid password/email")
+                throw new Error("Invalid password/username")
             }
 
             const token = sign({
