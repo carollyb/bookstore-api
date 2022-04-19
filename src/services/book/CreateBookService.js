@@ -1,7 +1,14 @@
 const prisma = require("../../database/prismaClient");
 
 module.exports = {
-    async execute(title, author, language, num_pages, publication_date, publisher, price) {
+    async execute(title,
+        author,
+        language,
+        num_pages,
+        publication_date,
+        publisher,
+        price,
+        userId) {
         try {
             const book = await prisma.book.create({
                 data: {
@@ -12,7 +19,7 @@ module.exports = {
                     publication_date: new Date(publication_date),
                     publisher,
                     price,
-                    userId: 'e839d690-4423-4637-99e1-a990210e4a5f'
+                    userId
                 }
             })
             return book

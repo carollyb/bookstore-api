@@ -10,7 +10,8 @@ module.exports = {
                 num_pages,
                 publication_date,
                 publisher,
-                price
+                price,
+                userId
             } = request.body;
 
             const book = await createBookService.execute(
@@ -20,7 +21,8 @@ module.exports = {
                 num_pages,
                 publication_date,
                 publisher,
-                price
+                price,
+                userId
             )
 
             return response.status(200).json(book)
