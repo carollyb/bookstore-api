@@ -8,8 +8,9 @@ module.exports = {
             language: Joi.string().required(),
             num_pages: Joi.number().required(),
             publication_date: Joi.date().required(),
+            publisher: Joi.string().required(),
             price: Joi.number().required(),
-            publisher: Joi.string().required()
+            userId: Joi.string()
         })
 
         const { error, value } = schema.validate(request.body)
