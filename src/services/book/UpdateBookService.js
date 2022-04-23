@@ -9,7 +9,8 @@ module.exports = {
         newNum_pages,
         newPublication_date,
         newPublisher,
-        newPrice
+        newPrice,
+        newUserId
         ) {
             try {
                 const newBookData = await prisma.book.update({
@@ -21,9 +22,10 @@ module.exports = {
                         author: newAuthor,
                         language: newLanguage,
                         num_pages: newNum_pages,
-                        publication_date: newPublication_date,
+                        publication_date: new Date(newPublication_date),
                         publisher: newPublisher,
                         price: newPrice,
+                        userId: newUserId
                     }
                 })
                 return newBookData

@@ -11,18 +11,19 @@ module.exports = {
                 num_pages,
                 publication_date,
                 publisher,
-                price
-            } = request.body;
+                price,
+                userId} = request.body;
 
             const updatedBook = await UpdateBookService.execute(
                 id,
                 title,
                 author,
                 language,
-                num_pages,
+                Number(num_pages),
                 publication_date,
                 publisher,
-                price
+                Number(price),
+                userId
             )
             return response.status(202).json({
                 message: "Successfully updated",

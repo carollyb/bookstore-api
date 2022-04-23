@@ -18,10 +18,10 @@ module.exports = {
                 title,
                 author,
                 language,
-                num_pages,
+                Number(num_pages),
                 publication_date,
                 publisher,
-                price,
+                Number(price),
                 userId
             )
 

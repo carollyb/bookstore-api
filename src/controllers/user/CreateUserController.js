@@ -6,7 +6,7 @@ module.exports = {
             const { username, fullName, password } = request.body
             const user = await CreateUserService.execute(username, fullName, password)
             response.status(201).json({
-                "user created": user
+                "user_created": user
             })
         } catch (error) {
             response.status(400).json({

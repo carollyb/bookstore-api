@@ -7,7 +7,7 @@ module.exports = {
             const book = await deleteBookService.execute(id);
             return response.status(202).json({
                 "message": "Accepted",
-                "deleted book": book
+                "deleted_book": book
             })
             
         } catch (error) {
