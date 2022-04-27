@@ -36,43 +36,40 @@
 
 ### Estrutura da API: rotas possíveis
 #### Livros (entidade book)
-```html
 <span style="color: green"> POST: </span>
   - /books (Cria um cadastro de um novo livro. Deve passar o objeto no corpo da requisição. O id não é necessário pois é gerado automaticamente através da biblioteca uuid)
-```html
+  
 <span style="color: purple"> GET: </span> 
   - /books (Lista todos os títulos cadastrados)
   - /books/`:title` (Lista títulos que sejam exatamente iguais ao título passado como parâmetro)
-```html
+
 <span style="color: orange"> PUT: </span>
   - /books/`:id` (Atualiza todos os atributos de um livro cadastrado. Deve passar o objeto com todos os atributos no corpo da requisição, com exceção do id, que não deve ser alterado manualmente)
-```html
+
 <span style="color: yellow"> PATCH: </span>
   - /books/`:id` (Atualiza um ou mais atributos de um livro cadastrado, com exceção do id. Deve passar um ou mais atributos no corpo da requisição, e o id como parâmetro)
-```html
+
 <span style="color: red"> DELETE: </span>
   - /books/`:id` (Deleta um livro do banco de dados. Deve passar o id do livro como parâmetro)
 
 #### Usuários (entidade user)
-```html
 <span style="color: green"> POST: </span>
   - /user (Cria um cadastro de um novo usuário. Deve passar o objeto no corpo da requisição. O id não é necessário pois é gerado automaticamente através da biblioteca uuid)
-```html
+  
 <span style="color: purple"> GET: </span> 
   - /user (Lista todos os usuários cadastrados)
   - /user/`:username` (Lista usuários cujo username seja exatamente igual ao username passado como parâmetro)
-```html
+
 <span style="color: orange"> PUT: </span>
   - /user/`:id` (Atualiza todos os atributos de um user cadastrado. Deve passar o objeto com todos os atributos no corpo da requisição, com exceção do id, que não deve ser alterado manualmente)
-```html
+
 <span style="color: yellow"> PATCH: </span>
   - /user/`:id` (Atualiza um ou mais atributos de um user cadastrado, com exceção do id. Deve passar um ou mais atributos no corpo da requisição, e o id como parâmetro)
-```html
+
 <span style="color: red"> DELETE: </span>
   - /user/`:id` (Deleta um usuário do banco de dados. Deve passar o id do user como parâmetro)
 
 #### Rota de autenticação
-```html
 <span style="color: green"> POST: </span>
   - /login (Faz o login do usuário. Deve passar o objeto no corpo da requisição e o usuário deve estar previamente cadastrado. Caso sucesso, retorna o token)
 
