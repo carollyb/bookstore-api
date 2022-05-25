@@ -6,7 +6,7 @@ const ListByTitleBookController = require("../controllers/book/ListByTitleBookCo
 const UpdateBookController = require("../controllers/book/UpdateBookController");
 const { validateFields } = require("../middlewares/requiredFields");
 const { checkDuplicates } = require("../middlewares/checkDuplicates");
-const { ensureAuth } = require("../middlewares/ensureAuth")
+const { ensureAuth } = require("../middlewares/ensureAuth");
 
 const router = Router();
 

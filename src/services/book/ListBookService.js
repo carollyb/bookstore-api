@@ -22,5 +22,15 @@ module.exports = {
             }
         })
         return searchBookById
+    },
+
+    async searchBookByLanguage(language) {
+        console.log(language);
+        const searchBookByLanguage = await prisma.book.findMany({
+            where: {
+                language: language
+            }
+        })
+        return searchBookByLanguage
     }
 }
