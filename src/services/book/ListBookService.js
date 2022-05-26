@@ -9,7 +9,10 @@ module.exports = {
     async searchBook(title) {
         const searchBook = await prisma.book.findMany({
             where: {
-                title: title
+                title: {
+                    contains: title,
+                    mode: 'insensitive'
+                }
             }
         })
         return searchBook
